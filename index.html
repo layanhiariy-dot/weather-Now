@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Luxe | Premium Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="page-shell">
+    <header class="header wrapper">
+      <div class="brand">
+        <img class="header__logo" src="assets/images/logo.svg" alt="Weather Luxe" width="180" height="36">
+        <div class="brand__text">
+          <p class="brand__eyebrow">Weather Luxe</p>
+          <p class="brand__label">Premium Dashboard</p>
+        </div>
+      </div>
+
+      <div class="controls">
+        <label class="control-group" for="ddlUnits">
+          <span class="control-group__label">Units</span>
+          <select class="dropdown" name="units" id="ddlUnits">
+            <option value="C">&deg;C</option>
+            <option value="F">&deg;F</option>
+          </select>
+        </label>
+      </div>
+    </header>
+
+    <main id="main" class="main wrapper">
+      <section class="hero glass-card">
+        <div class="hero__text">
+          <p class="hero__eyebrow">Global weather intelligence</p>
+          <h1 class="hero__title">Experience every forecast in luxury detail.</h1>
+          <p class="hero__copy">Search any destination to reveal a refined outlook, dynamic temperature insights, and high-end environmental clarity.</p>
+        </div>
+
+        <div class="hero__search-panel">
+          <label class="hero__search-label" for="txtSearch">Discover your location</label>
+          <div class="hero__search">
+            <input class="hero__textbox" type="text" name="search" id="txtSearch" placeholder="Search for a place..." autocomplete="off">
+            <button id="btnSearch" class="hero__button" type="button">Discover</button>
+          </div>
+          <p class="hero__hint">Toggle units to switch between Celsius and Fahrenheit.</p>
+        </div>
+      </section>
+
+      <section class="dashboard">
+        <article class="current glass-card">
+          <div class="current__header">
+            <div class="current__location">
+              <p class="current__label">Current location</p>
+              <h2 id="dvCityCountry" class="current__city">Berlin, Germany</h2>
+              <p id="dvCurrDate" class="current__date">Tuesday, Aug 5, 2025</p>
+            </div>
+            <p id="dvWeatherSummary" class="current__summary">Clear skies with exceptional visibility</p>
+          </div>
+
+          <div class="current__main">
+            <div class="current__graphic">
+              <img class="current__icon" src="assets/images/icon-sunny.webp" alt="Sunny" width="280" height="280">
+            </div>
+
+            <div class="current__details">
+              <div class="current__temperature">
+                <span id="dvCurrTemp">20</span><sup>°</sup>
+              </div>
+              <p class="current__temperature-note">Premium temperature reading</p>
+              <div class="current__stats">
+                <div class="current__stat">
+                  <span class="current__stat-label">Feels like</span>
+                  <strong id="pFeelsLike">18</strong><sup>°</sup>
+                </div>
+                <div class="current__stat">
+                  <span class="current__stat-label">Humidity</span>
+                  <strong id="pHumidity">65</strong><span>%</span>
+                </div>
+                <div class="current__stat">
+                  <span class="current__stat-label">Wind</span>
+                  <strong id="pWind">12 km/h</strong>
+                </div>
+                <div class="current__stat">
+                  <span class="current__stat-label">Precipitation</span>
+                  <strong id="pPrecipitation">0 mm</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <section class="daily glass-card">
+          <div class="daily__header">
+            <div>
+              <p class="section__label">7-Day Forecast</p>
+              <h3 class="daily__title">Refined weather outlook</h3>
+            </div>
+          </div>
+          <div class="daily__forecast">
+            <div id="dvForecastDay1" class="daily__day"></div>
+            <div id="dvForecastDay2" class="daily__day"></div>
+            <div id="dvForecastDay3" class="daily__day"></div>
+            <div id="dvForecastDay4" class="daily__day"></div>
+            <div id="dvForecastDay5" class="daily__day"></div>
+            <div id="dvForecastDay6" class="daily__day"></div>
+            <div id="dvForecastDay7" class="daily__day"></div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>
